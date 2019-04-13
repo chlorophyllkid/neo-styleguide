@@ -1,0 +1,10 @@
+
+extends layouts/default
+
+include modules/atoms/button/button.mixin.pug
+
+append stylesheets
+  link(rel='stylesheet' href='button.scss')
+
+block main
+  +button()
