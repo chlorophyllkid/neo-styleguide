@@ -1,0 +1,22 @@
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='initial-scale=1.0, width=device-width')
+
+    block title
+      title neo-styleguide
+
+    block stylesheets
+      link(rel='stylesheet' href='/bundle.scss')
+
+    block javascripts
+      script(src='/bundle.js')
+
+  body
+    block page
+      a(href='#main') Skip to main content
+
+      main(id='main')
+        block main

@@ -1,0 +1,36 @@
+{
+  "name": "neo-styleguide",
+  "version": "0.9.0",
+  "license": "MIT",
+  "author": "Christopher Voigt <chlorophyllkid@gmail.com>",
+  "description": "A starter project for module libraries and styleguides.",
+  "keywords": [
+    "parcel",
+    "11ty",
+    "styleguide"
+  ],
+  "scripts": {
+    "prestart": "npm run clean && npm run 11ty:build",
+    "start": "npm run develop:generate | npm run develop:server",
+    "prebuild": "npm run clean",
+    "build": "npm run 11ty:build && npm run parcel:build",
+    "clean": "rimraf .tmp && rimraf dist",
+    "develop:generate": "npm run 11ty:watch | npm run parcel:watch",
+    "develop:server": "browser-sync start --config .bs-config.js --proxy localhost:1234",
+    "11ty:build": "eleventy  --quiet",
+    "11ty:watch": "eleventy  --quiet --watch",
+    "parcel:build": "parcel build .tmp/parcel/**/*.html --out-dir dist --cache-dir .tmp/.cache",
+    "parcel:watch": "parcel serve .tmp/parcel/**/*.html --out-dir dist --cache-dir .tmp/.cache"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.2",
+    "@babel/preset-env": "^7.4.3",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "sass": "^1.18.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "browser-sync": "^2.26.3"
+  }
+}

@@ -1,0 +1,19 @@
+mixin textfield(conf)
+  -
+    conf = conf || {}
+    conf.name = conf.name || 'something';
+    conf.value = conf.value || '';
+    conf.placeholder = conf.placeholder || '';
+    conf.isDisabled = conf.isDisabled || false;
+
+  input.textfield(
+    type='text',
+    name=name,
+    value=value,
+    placeholder=placeholder,
+    disabled=isDisabled
+  )&attributes(attributes)
+
+
+//- Usage example
+//- +textfield({ name: 'search', placeholder: 'Type to search' })#searchfield

@@ -1,0 +1,14 @@
+mixin button(type, text)
+  -
+    type = type || 'button';
+    text = text || 'Send';
+
+  case type
+    when 'a'
+      a.button(href='#' title=text)&attributes(attributes)= text
+
+    when 'submit'
+      button.button(type='submit')&attributes(attributes)= text
+
+    default
+      button.button(type='button')&attributes(attributes)= text
