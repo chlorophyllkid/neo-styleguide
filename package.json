@@ -23,14 +23,14 @@
     "parcel:watch": "parcel serve .tmp/parcel/**/*.html --out-dir dist --cache-dir .tmp/.cache"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.8.2",
-    "@babel/preset-env": "^7.4.3",
+    "@11ty/eleventy": "^0.8.3",
+    "@babel/preset-env": "^7.4.5",
     "parcel-bundler": "^1.12.3",
     "rimraf": "^2.6.3",
-    "sass": "^1.18.0"
+    "sass": "^1.21.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "browser-sync": "^2.26.3"
+    "@babel/core": "^7.4.5",
+    "browser-sync": "^2.26.7"
   }
 }
